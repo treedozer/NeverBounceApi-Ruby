@@ -142,13 +142,13 @@ module NeverBounce
     attr_reader :response
 
     def initialize(response)
-      if response.headers['content-disposition'].to_s.index(/attachment;/)
-        @response  = response.parsed_response
-      else
-        @response  = JSON.parse(response.parsed_response)
-      end
-    rescue Exception => e
-      raise DownloadError, response['error_msg'] || e.message
+      @response = if response.headers['content-disposition'].to_s.index(/attachment;/)
+                    response.parsed_response
+                  else
+                    JSON.parse(response.parsed_response)
+                  end
+    rescue
+      raise DownloadError, response['error_msg']
     end
 
     def lines
