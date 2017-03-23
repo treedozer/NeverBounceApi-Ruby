@@ -8,7 +8,7 @@ Installation
 
 Add this line to your Rails application's Gemfile:
 ```
-$ gem 'never-bounce', git: 'https://github.com/treedozer/never-bounce'
+$ gem 'never_bounce', git: 'https://github.com/treedozer/never_bounce'
 ```
 And then execute:
 ```
@@ -16,9 +16,9 @@ $ bundle install
 ```
 Or install it yourself as:
 ```
-$ git clone https://github.com/treedozer/never-bounce.git
-$ cd never-bounce && gem build never-bounce.gemspec
-$ sudo gem install never-bounce-0.1.5.gem
+$ git clone https://github.com/treedozer/never_bounce.git
+$ cd never_bounce && gem build never_bounce.gemspec
+$ sudo gem install never_bounce-0.1.5.gem
 ```
 
 Usage
