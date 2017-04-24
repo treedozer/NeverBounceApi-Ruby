@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['libs']
   s.required_ruby_version     = '>= 1.9.3'
 
-  s.add_dependency('httparty', '~> 0.13.7')
+  s.add_dependency('httparty', '~> 0.14')
 
   s.add_development_dependency('rspec', '~> 3.4', '>= 3.4.0')
   s.add_development_dependency('rake', '~> 0')
