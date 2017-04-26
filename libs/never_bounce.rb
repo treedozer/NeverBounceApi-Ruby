@@ -1,9 +1,9 @@
 require 'httparty'
 require 'json'
 
-require __FILE__ + '/../never_bounce/errors'
-require __FILE__ + '/../never_bounce/single'
-require __FILE__ + '/../never_bounce/list'
+require 'never_bounce/errors'
+require 'never_bounce/single'
+require 'never_bounce/list'
 
 module NeverBounce
 

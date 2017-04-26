@@ -1,4 +1,4 @@
-require './libs/never_bounce/single'
+require 'never_bounce'
 require 'spec_helper'
 
 
