@@ -1,4 +1,6 @@
-require './libs/never_bounce'
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'never_bounce'
@@ -10,12 +12,12 @@ Gem::Specification.new do |s|
   s.email       = ['mike@neverbounce.com']
   s.homepage    = 'https://neverbounce.com'
   s.license     = 'MIT'
-  s.files       = `git ls-files libs/*`.split("\n")
+  s.files       = `git ls-files lib/*`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")
-  s.require_paths = ['libs']
+  s.require_paths = ['lib']
   s.required_ruby_version     = '>= 1.9.3'
 
-  s.add_dependency('httparty', '~> 0.13.7')
+  s.add_dependency 'httparty', '~> 0.14'
 
   s.add_development_dependency('rspec', '~> 3.4', '>= 3.4.0')
   s.add_development_dependency('rake', '~> 0')
